@@ -31,6 +31,9 @@ export async function createBranch() {
         ...context.repo,
         branch,
       });
+
+    core.setOutput('createdBranch', ref);
+
     } catch (error: any) {
       if (error.name === 'HttpError' && error.status === 404) {
         const resp = await toolkit.rest.git.createRef({
