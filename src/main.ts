@@ -3,8 +3,7 @@ import { createBranch } from './create-branch';
 
 async function run() {
   try {
-    const isCreated = await createBranch();
-    core.setOutput('created', Boolean(isCreated));
+    await createBranch();
   } catch (error: any) {
     core.setFailed(error.message);
   }
