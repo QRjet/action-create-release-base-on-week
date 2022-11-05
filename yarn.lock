@@ -2,12 +2,13 @@
 # yarn lockfile v1
 
 
-"@actions/core@1.6.0":
-  "integrity" "sha512-NB1UAZomZlCV/LmJqkLhNTqtKfFXJZAUPcfl/zqG7EfsQdeUJtaWO98SGbuQ3pydJ3fHl2CvI/51OKYlCYYcaw=="
-  "resolved" "https://registry.npmjs.org/@actions/core/-/core-1.6.0.tgz"
-  "version" "1.6.0"
+"@actions/core@1.10.0":
+  "integrity" "sha512-2aZDDa3zrrZbP5ZYg159sNoLRb61nQ7awl5pSvIq5Qpj81vwDzdMRKzkWJGJuwVvWpvZKx7vspJALyvaaIQyug=="
+  "resolved" "https://registry.npmjs.org/@actions/core/-/core-1.10.0.tgz"
+  "version" "1.10.0"
   dependencies:
-    "@actions/http-client" "^1.0.11"
+    "@actions/http-client" "^2.0.1"
+    "uuid" "^8.3.2"
 
 "@actions/github@5.0.0":
   "integrity" "sha512-QvE9eAAfEsS+yOOk0cylLBIO/d6WyWIOvsxxzdrPFaud39G6BOkUwScXZn1iBzQzHyu9SBkkLSWlohDWdsasAQ=="
@@ -25,6 +26,13 @@
   "version" "1.0.11"
   dependencies:
     "tunnel" "0.0.6"
+
+"@actions/http-client@^2.0.1":
+  "integrity" "sha512-PIXiMVtz6VvyaRsGY268qvj57hXQEpsYogYOu2nrQhlf+XCGmZstmuZBbAybUl1nQGnvS1k1eEsQ69ZoD7xlSw=="
+  "resolved" "https://registry.npmjs.org/@actions/http-client/-/http-client-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "tunnel" "^0.0.6"
 
 "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.0":
   "integrity" "sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA=="
@@ -1246,6 +1254,11 @@
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
+
+"fsevents@^2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
@@ -2513,7 +2526,7 @@
     "semver" "7.x"
     "yargs-parser" "20.x"
 
-"tunnel@0.0.6":
+"tunnel@^0.0.6", "tunnel@0.0.6":
   "integrity" "sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg=="
   "resolved" "https://registry.npmjs.org/tunnel/-/tunnel-0.0.6.tgz"
   "version" "0.0.6"
@@ -2556,6 +2569,11 @@
   "integrity" "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg=="
   "resolved" "https://registry.npmjs.org/universalify/-/universalify-0.1.2.tgz"
   "version" "0.1.2"
+
+"uuid@^8.3.2":
+  "integrity" "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
+  "resolved" "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
+  "version" "8.3.2"
 
 "v8-to-istanbul@^8.1.0":
   "integrity" "sha512-/PRhfd8aTNp9Ggr62HPzXg2XasNFGy5PBt0Rp04du7/8GNNSgxFL6WBTkgMKSL9bFjH+8kKEG3f37FmxiTqUUA=="
