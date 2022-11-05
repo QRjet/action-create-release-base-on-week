@@ -32,7 +32,8 @@ export async function createBranch() {
         branch,
       });
 
-    core.setOutput('createdBranch', ref);
+      core.setOutput('branchName', ref);
+      core.setOutput('branchCreated', false);
 
     } catch (error: any) {
       if (error.name === 'HttpError' && error.status === 404) {
@@ -41,6 +42,10 @@ export async function createBranch() {
           sha: context.sha,
           ...context.repo,
         });
+       
+       
+        core.setOutput('branchName', ref);
+        core.setOutput('branchCreated', true);
 
         return resp?.data?.ref === ref;
       } else {
