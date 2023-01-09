@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 export async function createBranch() {
  
   const baseNumber = parseInt(core.getInput('baseNumber')) ?? 0;
-  const numberOfWeeks = parseInt(core.getInput('numberOfWeeks')) ?? 2;
+  const numberOfWeeks = parseInt(core.getInput('numberOfWeeks')) ?? 1;
   const epochDateInput = core.getInput('baseDate');
 
   let epochDate = dayjs(epochDateInput).hour(7).minute(30);
@@ -22,7 +22,9 @@ export async function createBranch() {
 
     const toolkit = getOctokit(githubToken());
     // Sometimes branch might come in with refs/heads already
-    let branch = `release-${count}`;
+    const numString = ( count < 10 ) ? count.toString(10).padStart(2, '0') : count ;
+    const lastTwoDigits = dayjs().year() % 100;
+    let branch = `release-${lastTwoDigits}${numString}`;
     const ref = `refs/heads/${branch}`;
 
     // throws HttpError if branch already exists.
