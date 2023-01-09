@@ -6,11 +6,11 @@ branding:
   color: 'green'
 inputs:
   baseNumber:
-    description: 'the number to start release with for example here baseNumber 3 `"release-3"`'
+    description: 'the number to start release with for example here baseNumber 3 `"release-2303"`'
     default: '0'
   numberOfWeeks:
     description: 'create release branch on each number of weeks'
-    default: '2'
+    default: '1'
   baseDate:
     description: 'base date to check if specific number of weeks are passed'
     required: true
@@ -20,5 +20,5 @@ outputs:
   branchCreated:
     description: 'Boolean value representing whether or not a new branch was created.'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
